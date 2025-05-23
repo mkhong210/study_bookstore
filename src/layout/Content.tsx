@@ -12,6 +12,8 @@ import CartPage from "../pages/CartPage";
 import DetailPage from "../pages/DetailPage";
 import LoginPage from "../pages/LoginPage";
 import HomePage from "../pages/HomePage";
+import DetailPage2 from "../pages/DetailPage2";
+import DetailPage3 from "../pages/DetailPage3";
 
 // function Content() {
 //   return <div>본문입니다.</div>;
@@ -53,6 +55,9 @@ const Content: React.FC = () => {
           path="*"
           element={"페이지가 존재하지 않습니다. 확인해주세요."}
         ></Route>
+        {/* 25.05.23 */}
+        <Route path="/detail2" element={<DetailPage2></DetailPage2>}></Route>
+        <Route path="/detail3" element={<DetailPage3></DetailPage3>}></Route>
       </Routes>
     </div>
   );
