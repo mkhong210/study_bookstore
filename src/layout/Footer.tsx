@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
             ghdalsrud@naver.com
           </a>
         </p>
-        <p>copyright</p>
+        <p>Copyright 홍민경 Corp. All right Reserved</p>
       </Container>
     </footer>
   );

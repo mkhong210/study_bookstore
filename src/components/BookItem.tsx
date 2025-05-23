@@ -35,7 +35,7 @@ const BookItem: React.FC<BookItemProps> = ({ book }) => {
             </Card.Text>
             <div className="linkTo">
               <Link to={`/detail/${book.id}`} state={{ book }}>
-                <Button variant="primary">Go somewhere</Button>
+                <Button variant="primary">자세히 보기</Button>
               </Link>
             </div>
           </Card.Body>
