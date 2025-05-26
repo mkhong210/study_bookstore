@@ -2,8 +2,13 @@
 
 import React, { useEffect, useState } from "react";
 
+interface DogBreed {
+  id: number;
+  name: string;
+}
+
 const DetailPage3: React.FC = () => {
-  const [breeds, setBreeds] = useState([]);
+  const [breeds, setBreeds] = useState<DogBreed[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,7 +30,7 @@ const DetailPage3: React.FC = () => {
     <div>
       <h1>Dog Breeds</h1>
       <ul>
-        {breeds.map((breed: any) => (
+        {breeds.map((breed) => (
           <li key={breed.id}>{breed.name}</li>
         ))}
       </ul>
