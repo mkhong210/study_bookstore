@@ -15,6 +15,10 @@ import HomePage from "../pages/HomePage";
 import DetailPage2 from "../pages/DetailPage2";
 import DetailPage3 from "../pages/DetailPage3";
 
+// 25.05.26
+// bootstrap-icons 추가
+import { PersonFill } from "react-bootstrap-icons";
+
 // function Content() {
 //   return <div>본문입니다.</div>;
 // }
@@ -35,6 +39,14 @@ const Content: React.FC = () => {
             <Nav.Link href="/about">About</Nav.Link>
             <Nav.Link href="/list">Product</Nav.Link>
             <Nav.Link href="/contact">Contact</Nav.Link>
+          </Nav>
+          <Nav>
+            <Nav.Link href="/login" className="d-flex align-item-center">
+              <PersonFill size={20} classListme-2>
+                Login
+              </PersonFill>
+              로그인
+            </Nav.Link>
           </Nav>
         </Container>
       </Navbar>
