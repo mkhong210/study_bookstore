@@ -1,54 +1,45 @@
-# React + TypeScript + Vite
+# Study Bookstore
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React + TypeScript + Vite 기반으로 구현한 온라인 서점 웹앱입니다.  
+컴포넌트 기반 UI 설계와 라우팅, 상태 관리, 부트스트랩 UI 컴포넌트 사용 경험을 익히기 위한 스터디/실습 프로젝트입니다.
 
-Currently, two official plugins are available:
+<br />
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 사용 기술 스택
 
-## Expanding the ESLint configuration
+- **Frontend**: React, TypeScript, Vite
+- **Styling**: Bootstrap, React-Bootstrap
+- **Routing**: React Router DOM v7
+- **HTTP 통신**: Axios
+- **개발환경**: ESLint, TypeScript, Vite
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+<br />
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 주요 기능
+
+- 홈, 로그인, 소개, 연락처 페이지 등 **여러 라우트로 구성된 다중 페이지 구성**
+- `BookItem`, `Carousel` 등 **재사용 가능한 컴포넌트 구조 설계**
+- `CartPage.tsx`를 통한 **장바구니 페이지 구현**
+- 도서 상세 페이지: `DetailPage.tsx`, `DetailPage2.tsx`, `DetailPage3.tsx`로 다양한 버전의 상세 구성 실험
+- Bootstrap 기반의 UI 구성 실습
+
+<br />
+
+## 폴더 구조 요약
+
+```
+src/
+├── assets/             # 이미지 및 정적 파일
+├── components/         # 공통 컴포넌트 (BookItem, Carousel 등)
+├── data/               # 데이터 관련 파일
+├── layout/             # 레이아웃 구성 요소 (Content, Footer 등)
+├── pages/              # 페이지별 라우트 (Home, Cart, Login, Detail 등)
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+<br />
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 개인 회고 
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+> React 프로젝트 구조를 처음부터 잡아보며 라우팅과 컴포넌트 분리에 대한 감을 익힐 수 있었습니다. 
+> Bootstrap을 활용해 빠르게 레이아웃을 구성하는 경험을 했습니다.
+> 앞으로 상태 관리나 서버 연동까지 확장해보고 싶습니다.
